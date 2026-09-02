@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               user-scalable=no">
+
+<title>Garena Free Fire Team</title>
+
+
+<style>
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+}
+
+body{
+    width:100%;
+    min-height:100%;
+    margin:0;
+    padding:0;
+
+    overflow-x:hidden;
+
+    background:#2b2b2b;
+
+    color:#fff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header{
+    width:100%;
+    height:82px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:0 12px;
+
+    background:
+        linear-gradient(
+            #86d2ed,
+            #65bfe0
+        );
+
+    box-shadow:
+        0 3px 8px rgba(0,0,0,.25);
+}
+
+.header h1{
+    width:100%;
+
+    margin:0;
+    padding:0;
+
+    font-size:27px;
+    line-height:1.1;
+
+    font-weight:800;
+
+    text-align:center;
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,.30);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main{
+    width:100%;
+    max-width:680px;
+
+    margin:0 auto;
+    padding:0 13px 20px;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:visible;
+}
+
+
+/* =========================================
+   WATCH TITLE
+========================================= */
+
+.watch-title{
+    width:100%;
+
+    margin:0;
+
+    padding:
+        34px 5px 18px;
+
+    font-size:27px;
+    line-height:1;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+    color:#fff;
+}
+
+
+/* =========================================
+   VIDEO CONTAINER
+========================================= */
+
+.video-box{
+    width:100%;
+    max-width:100%;
+
+    margin:0;
+    padding:0;
+
+    aspect-ratio:16 / 9;
+
+    position:relative;
+
+    background:#000;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 7px 18px rgba(0,0,0,.45);
+}
+
+
+/* VIDEO */
+
+.video-box video{
+    position:absolute;
+
+    inset:0;
+
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    margin:0;
+    padding:0;
+
+    border:0;
+
+    background:#000;
+
+    object-fit:contain;
+}
+
+
+/* =========================================
+   DIAMOND CARD
+   ONLY 8PX GAP FROM VIDEO
+========================================= */
+
+.diamond-card{
+    width:100%;
+    max-width:100%;
+
+    margin:
+        8px 0 0;
+
+    padding:3px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    flex:none;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000
+        );
+
+    background-size:400% 400%;
+
+    animation:
+        rgbAnimation 10s linear infinite;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.50);
+}
+
+
+/* =========================================
+   NEON ANIMATION
+========================================= */
+
+@keyframes rgbAnimation{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+
+/* =========================================
+   CARD INNER
+========================================= */
+
+.card-inner{
+    width:100%;
+    max-width:100%;
+
+    margin:0;
+    padding:
+        12px;
+
+    background:#111;
+
+    border-radius:17px;
+
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* =========================================
+   BADGES
+========================================= */
+
+.badges{
+    width:100%;
+
+    margin:
+        0 0 8px;
+
+    padding:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+}
+
+.badge{
+    padding:
+        6px 13px;
+
+    border-radius:20px;
+
+    font-size:12px;
+    line-height:1;
+
+    font-weight:800;
+
+    white-space:nowrap;
+}
+
+.new{
+    background:#ff3b48;
+}
+
+.premium{
+    background:#6955ee;
+}
+
+
+/* =========================================
+   PRODUCT
+========================================= */
+
+.product{
+    width:100%;
+
+    margin:0;
+    padding:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    min-width:0;
+}
+
+
+/* =========================================
+   CLICKABLE PRODUCT IMAGE
+========================================= */
+
+.product-link{
+    display:block;
+
+    width:82px;
+    height:82px;
+
+    min-width:82px;
+
+    flex:0 0 82px;
+
+    margin:0;
+    padding:0;
+
+    text-decoration:none;
+
+    overflow:hidden;
+
+    border-radius:14px;
+}
+
+.product-image{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    margin:0;
+    padding:0;
+
+    border:0;
+
+    object-fit:cover;
+
+    background:#222;
+
+    border-radius:14px;
+}
+
+
+/* =========================================
+   PRODUCT INFO
+========================================= */
+
+.product-info{
+    min-width:0;
+
+    flex:1;
+
+    margin:0;
+    padding:0;
+
+    overflow:hidden;
+}
+
+
+/* TITLE */
+
+.product-title{
+    width:100%;
+
+    margin:
+        0 0 5px;
+
+    padding:0;
+
+    font-size:22px;
+    line-height:1.05;
+
+    font-weight:800;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+
+/* DESCRIPTION */
+
+.product-desc{
+    width:100%;
+
+    margin:0;
+    padding:0;
+
+    color:#aaa;
+
+    font-size:12px;
+
+    line-height:1.35;
+}
+
+
+/* STARS */
+
+.stars{
+    margin:
+        4px 0 0;
+
+    padding:0;
+
+    color:#ffd000;
+
+    font-size:18px;
+
+    line-height:1;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================
+   CLAIM BUTTON
+========================================= */
+
+.claim-btn{
+    width:100%;
+
+    height:58px;
+
+    margin:
+        10px 0 0;
+
+    padding:0 12px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:0;
+
+    border-radius:40px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00f084,
+            #00d86f
+        );
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:20px;
+    line-height:1;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+    box-shadow:
+        0 5px 16px
+        rgba(0,230,120,.40);
+
+    transition:
+        transform .15s ease,
+        filter .15s ease;
+}
+
+.claim-btn:hover{
+    filter:brightness(1.05);
+}
+
+.claim-btn:active{
+    transform:scale(.97);
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media(max-width:360px){
+
+    .header{
+        height:68px;
+    }
+
+    .header h1{
+        font-size:21px;
+    }
+
+    .main{
+        padding:
+            0 10px 16px;
+    }
+
+    .watch-title{
+        padding:
+            20px 4px 11px;
+
+        font-size:21px;
+    }
+
+    .video-box{
+        border-radius:14px;
+    }
+
+    /* केवल 8px gap */
+
+    .diamond-card{
+        margin-top:8px;
+
+        padding:3px;
+
+        border-radius:17px;
+    }
+
+    .card-inner{
+        padding:9px;
+
+        border-radius:14px;
+    }
+
+    .badges{
+        gap:6px;
+
+        margin-bottom:6px;
+    }
+
+    .badge{
+        padding:
+            5px 10px;
+
+        font-size:10px;
+    }
+
+    .product{
+        gap:8px;
+    }
+
+    .product-link{
+        width:70px;
+        height:70px;
+
+        min-width:70px;
+        flex-basis:70px;
+
+        border-radius:12px;
+    }
+
+    .product-image{
+        border-radius:12px;
+    }
+
+    .product-title{
+        font-size:19px;
+    }
+
+    .product-desc{
+        font-size:10px;
+    }
+
+    .stars{
+        font-size:16px;
+    }
+
+    .claim-btn{
+        height:52px;
+
+        margin-top:8px;
+
+        font-size:17px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <h1>
+        Garena Free Fire Team
+    </h1>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="main">
+
+
+    <!-- WATCH FULL VIDEO -->
+
+    <h2 class="watch-title">
+        WATCH FULL VIDEO
+    </h2>
+
+
+
+    <!-- ======================================
+         VIDEO
+    ======================================= -->
+
+    <section class="video-box">
+
+        <video
+            controls
+            playsinline
+            preload="metadata"
+        >
+
+            <source
+                src="proxyvideo.mp4"
+                type="video/mp4"
+            >
+
+            Your browser does not support
+            the video tag.
+
+        </video>
+
+    </section>
+
+
+
+    <!-- ======================================
+         LATEST PROXY SERVER
+         8PX GAP ONLY
+    ======================================= -->
+
+    <section class="diamond-card">
+
+
+        <div class="card-inner">
+
+
+            <!-- BADGES -->
+
+            <div class="badges">
+
+                <span class="badge new">
+                    NEW
+                </span>
+
+                <span class="badge premium">
+                    PREMIUM
+                </span>
+
+            </div>
+
+
+
+            <!-- PRODUCT -->
+
+            <div class="product">
+
+
+                <!-- CLICKABLE IMAGE -->
+
+                <a
+                    href="CLAIM_URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="product-link"
+                >
+
+                    <img
+                        class="product-image"
+                        src="ffproxy7.png"
+                        alt="Latest Proxy Server"
+                    >
+
+                </a>
+
+
+
+                <!-- PRODUCT INFO -->
+
+                <div class="product-info">
+
+                    <div class="product-title">
+                        LATEST PROXY SERVER
+                    </div>
+
+
+                    <div class="product-desc">
+                        LATEST PROXY SERVER<br>
+                        DOWNLOAD
+                    </div>
+
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- INSTALL BUTTON -->
+
+            <a
+                class="claim-btn"
+                href="CLAIM_URL"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                INSTALL
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+</body>
+
+</html>
